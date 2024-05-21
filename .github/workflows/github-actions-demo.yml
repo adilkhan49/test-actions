@@ -28,3 +28,10 @@ jobs:
           python act.py
           cat file.log
       - run: echo "🍏 This job's status is ${{ job.status }}."
+      - name: Commit report
+        run: |
+          git config --global user.name 'Adil Khan'
+          git config --global user.email 'adilkhan49@hotmail.com'
+          git add file.log
+          git commit -m "Automated report"
+          git push
