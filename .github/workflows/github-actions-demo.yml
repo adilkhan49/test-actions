@@ -24,6 +24,6 @@ jobs:
           python-version: "3.10"
       - name: Run code
         run: |
-          python run act.py
+          python act.py
           cat file.log
 
