@@ -28,5 +28,12 @@ jobs:
           pip install pipenv
           python act.py
           cat file.log
+     - name: Commit report
+        run: |
+          git config --global user.name 'Adil Khan'
+          git config --global user.email 'adilkhan49@hotmail.com'
+          git add file.log
+          git commit -am "Automated report"
+          git push
       - run: echo "🍏 This job's status is ${{ job.status }}."
 
