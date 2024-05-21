@@ -24,7 +24,6 @@ jobs:
           python-version: "3.10"
       - name: Run code
         run: |
-          pip install pipenv
-          pipenv run act.py
+          python run act.py
           cat file.log
 
